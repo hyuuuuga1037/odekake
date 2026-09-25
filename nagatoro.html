@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>長瀞SLおでかけしおり</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Zen+Maru+Gothic:wght@500;700&display=swap">
+<style>
+:root{
+  --bg:#F6FAF1;
+  --paper:#FFFFFF;
+  --ink:#4A3B32;
+  --ink-soft:#7A6A5E;
+  --line:#E6E0D2;
+  --orange:#F29A2E;
+  --orange-deep:#D97E12;
+  --orange-soft:#FFF1DD;
+  --green:#6DBB6A;
+  --green-deep:#4E9C4C;
+  --green-soft:#E6F4E1;
+  --sky:#8CC8EA;
+  --sky-soft:#E4F2FB;
+  --pink:#F3A6AE;
+  --pink-soft:#FDEBEE;
+  --stripe:rgba(109,187,106,.10);
+  --shadow:0 4px 0 rgba(74,59,50,.12);
+  --loco:#3E3A44;
+  --font-d:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+  --font-b:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#1E221D; --paper:#2A2F29; --ink:#F1EADF; --ink-soft:#C3B8AA; --line:#3E453C;
+    --orange:#F5A849; --orange-deep:#F7B866; --orange-soft:#43331F;
+    --green:#86C983; --green-deep:#9AD697; --green-soft:#29392A;
+    --sky:#8CC8EA; --sky-soft:#223441; --pink:#F3A6AE; --pink-soft:#432D31;
+    --stripe:rgba(134,201,131,.07); --shadow:0 4px 0 rgba(0,0,0,.35); --loco:#56515E;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#1E221D; --paper:#2A2F29; --ink:#F1EADF; --ink-soft:#C3B8AA; --line:#3E453C;
+  --orange:#F5A849; --orange-deep:#F7B866; --orange-soft:#43331F;
+  --green:#86C983; --green-deep:#9AD697; --green-soft:#29392A;
+  --sky:#8CC8EA; --sky-soft:#223441; --pink:#F3A6AE; --pink-soft:#432D31;
+  --stripe:rgba(134,201,131,.07); --shadow:0 4px 0 rgba(0,0,0,.35); --loco:#56515E;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-b);
+  font-size:16px;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:880px;margin:0 auto;padding-inline:16px}
+h1,h2,h3{font-family:var(--font-d);text-wrap:balance;margin:0;line-height:1.35}
+p{margin:0}
+.num{font-family:var(--font-d);font-variant-numeric:tabular-nums}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    repeating-linear-gradient(135deg,var(--stripe) 0 14px,transparent 14px 28px),
+    var(--bg);
+  padding-block:40px 28px;
+}
+.hero .blob{position:absolute;border-radius:50%;filter:blur(0);opacity:.55}
+.hero .b1{width:320px;height:260px;background:var(--sky-soft);top:-80px;right:-60px;border-radius:58% 42% 55% 45%/50% 60% 40% 50%}
+.hero .b2{width:220px;height:200px;background:var(--orange-soft);bottom:-70px;left:-50px;border-radius:45% 55% 40% 60%/60% 40% 60% 40%}
+.hero-inner{position:relative;display:grid;gap:20px;align-items:center}
+@media(min-width:720px){.hero-inner{grid-template-columns:1.1fr 1fr}}
+.tag{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--paper);border:2px solid var(--ink);border-radius:999px;
+  padding:2px 14px;font-family:var(--font-d);font-weight:700;font-size:13px;letter-spacing:.06em;
+}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--orange);display:inline-block}
+.hero .lead{font-family:var(--font-d);font-weight:700;font-size:15px;color:var(--ink-soft);margin-top:14px}
+.hero h1{
+  font-weight:800;font-size:clamp(30px,6.4vw,48px);letter-spacing:.02em;margin-top:2px;
+}
+.hero h1 .ln{display:block;white-space:nowrap}
+.hero h1 .hl{
+  color:var(--orange-deep);
+  background:linear-gradient(transparent 68%,var(--orange-soft) 68%);
+  padding-inline:2px;
+}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--paper);border-radius:999px;padding:4px 14px;
+  font-family:var(--font-d);font-weight:700;font-size:14px;box-shadow:var(--shadow);
+}
+.chip svg{width:18px;height:18px}
+.hero-art{position:relative;max-width:420px;width:100%;justify-self:center}
+.hero-art svg{width:100%;height:auto;display:block}
+.puff{animation:puff 3.2s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+.puff.d2{animation-delay:.6s}.puff.d3{animation-delay:1.2s}
+@keyframes puff{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-6px) scale(1.06)}}
+@media (prefers-reduced-motion:reduce){.puff{animation:none}}
+
+/* ---------- wave ---------- */
+.wave{display:block;width:100%;height:36px;color:var(--paper)}
+.sec-paper{background:var(--paper)}
+.sec-bg{background:var(--bg)}
+
+/* ---------- section head ---------- */
+section{padding-block:36px 44px}
+.sh{text-align:center;margin-bottom:26px}
+.sh .en{
+  font-family:var(--font-d);font-weight:800;font-size:12px;letter-spacing:.22em;
+  color:var(--green-deep);
+}
+.sh h2{font-size:clamp(22px,4.6vw,28px);font-weight:800;margin-top:2px}
+.sh h2::after{
+  content:"";display:block;width:64px;height:6px;margin:10px auto 0;border-radius:6px;
+  background:radial-gradient(circle,var(--orange) 2.5px,transparent 3px) 0 0/12px 6px repeat-x;
+}
+
+/* ---------- members ---------- */
+.members{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.m-card{
+  background:var(--bg);border-radius:22px;padding:18px 20px;
+  display:flex;gap:14px;align-items:flex-start;
+}
+.m-ic{
+  flex:none;width:52px;height:52px;border-radius:50%;
+  display:grid;place-items:center;background:var(--paper);border:2px solid var(--ink);
+}
+.m-ic svg{width:30px;height:30px}
+.m-card h3{font-size:15px;font-weight:800;color:var(--ink-soft)}
+.m-card .big{font-family:var(--font-d);font-weight:800;font-size:20px}
+.kids{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.kid{
+  font-family:var(--font-d);font-weight:700;font-size:13px;
+  background:var(--pink-soft);border-radius:999px;padding:2px 10px;
+}
+
+/* ---------- main event ---------- */
+.main-ev{
+  position:relative;
+  background:var(--orange-soft);
+  border:3px solid var(--ink);border-radius:30px;
+  padding:28px 22px 24px;
+  display:grid;gap:18px;
+}
+@media(min-width:720px){.main-ev{grid-template-columns:1fr 1.1fr;align-items:center;padding:32px 34px}}
+.ribbon{
+  position:absolute;top:-17px;left:50%;transform:translateX(-50%);
+  background:var(--orange);color:#fff;border:3px solid var(--ink);border-radius:999px;
+  font-family:var(--font-d);font-weight:800;font-size:14px;letter-spacing:.08em;
+  padding:2px 18px;white-space:nowrap;
+}
+.main-ev h3{font-size:clamp(20px,4.6vw,26px);font-weight:800}
+.main-ev .sub{color:var(--ink-soft);font-weight:700;font-size:14px;margin-top:4px}
+.clock{
+  display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;
+  background:var(--paper);border-radius:22px;padding:16px 14px;box-shadow:var(--shadow);
+}
+.clock .t{text-align:center}
+.clock .t small{display:block;font-family:var(--font-d);font-weight:700;font-size:12px;color:var(--ink-soft);letter-spacing:.08em}
+.clock .t b{display:block;font-family:var(--font-d);font-weight:800;font-size:clamp(28px,7vw,38px);line-height:1.1;font-variant-numeric:tabular-nums}
+.clock .t.arr b{color:var(--orange-deep)}
+.clock .mid{
+  font-family:var(--font-d);font-weight:800;font-size:13px;color:var(--green-deep);
+  background:var(--green-soft);border-radius:999px;padding:4px 10px;text-align:center;line-height:1.3;
+}
+.main-note{font-size:14px;margin-top:12px;color:var(--ink-soft)}
+.main-note b{color:var(--ink)}
+
+/* ---------- timeline ---------- */
+.switch{
+  display:flex;gap:6px;justify-content:center;flex-wrap:wrap;
+  background:var(--paper);border-radius:999px;padding:6px;width:max-content;max-width:100%;
+  margin:0 auto 10px;box-shadow:var(--shadow);
+}
+.switch button{
+  font-family:var(--font-d);font-weight:800;font-size:15px;color:var(--ink-soft);
+  border:0;background:transparent;border-radius:999px;padding:8px 18px;cursor:pointer;
+}
+.switch button[aria-pressed="true"]{background:var(--green);color:#fff}
+.switch button:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.sw-note{text-align:center;font-size:14px;color:var(--ink-soft);margin-bottom:24px;min-height:1.8em}
+
+.tl{list-style:none;margin:0;padding:0;position:relative;max-width:640px;margin-inline:auto}
+.tl::before{
+  content:"";position:absolute;left:23px;top:10px;bottom:10px;width:4px;border-radius:4px;
+  background:repeating-linear-gradient(var(--line) 0 8px,transparent 8px 14px);
+}
+.tl li{position:relative;display:grid;grid-template-columns:50px 1fr;gap:12px;padding-bottom:16px}
+.dot{
+  width:50px;height:50px;border-radius:50%;background:var(--paper);border:3px solid var(--ink);
+  display:grid;place-items:center;position:relative;z-index:1;
+}
+.dot svg{width:26px;height:26px}
+.tl .card{background:var(--paper);border-radius:20px;padding:12px 18px 14px;box-shadow:var(--shadow)}
+.tl .time{
+  display:inline-block;font-family:var(--font-d);font-weight:800;font-size:14px;
+  color:var(--green-deep);background:var(--green-soft);border-radius:999px;padding:0 10px;
+  font-variant-numeric:tabular-nums;
+}
+.tl h3{font-size:17px;font-weight:800;margin-top:4px}
+.tl p{font-size:14.5px;color:var(--ink-soft);margin-top:2px}
+.tl .memo{
+  margin-top:8px;font-size:13.5px;background:var(--sky-soft);border-radius:12px;padding:6px 12px;color:var(--ink);
+}
+.tl li.star .dot{background:var(--orange);}
+.tl li.star .card{background:var(--orange-soft);border:2px solid var(--orange)}
+.tl li.star .time{background:var(--orange);color:#fff}
+.tl li.soft .card{background:transparent;box-shadow:none;border:2px dashed var(--line)}
+
+/* ---------- afternoon ---------- */
+.pm-lead{text-align:center;font-size:15px;max-width:34em;margin:0 auto 24px}
+.pm{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.pm-card{background:var(--bg);border-radius:26px;padding:22px 20px 20px;display:flex;flex-direction:column;gap:10px}
+.pm-top{display:flex;align-items:center;gap:12px}
+.pm-badge{
+  flex:none;width:48px;height:48px;border-radius:50%;
+  display:grid;place-items:center;border:3px solid var(--ink);
+  font-family:var(--font-d);font-weight:800;font-size:22px;color:#fff;
+}
+.pm-card.a .pm-badge{background:var(--green)}
+.pm-card.b .pm-badge{background:var(--sky)}
+.pm-card.c .pm-badge{background:var(--pink)}
+.pm-card h3{font-size:18px;font-weight:800}
+.pm-card .when{font-size:13px;font-weight:700;color:var(--ink-soft);line-height:1.5}
+.pm-card ul{margin:0;padding:0;list-style:none;display:grid;gap:4px}
+.pm-card li{position:relative;padding-left:20px;font-size:14.5px}
+.pm-card li::before{content:"";position:absolute;left:4px;top:.72em;width:8px;height:8px;border-radius:50%;background:var(--orange)}
+.pm-card.a li::before{background:var(--green)}
+.pm-card.b li::before{background:var(--sky)}
+.pm-card.c li::before{background:var(--pink)}
+.bonus{
+  margin-top:auto;background:var(--paper);border-radius:16px;padding:10px 14px;font-size:14px;
+  border:2px solid var(--orange);
+}
+.bonus b{font-family:var(--font-d);color:var(--orange-deep)}
+.bonus .num{font-weight:800}
+.pm-foot{font-size:13.5px;color:var(--ink-soft)}
+
+/* ---------- route ---------- */
+.route{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.rt{background:var(--paper);border-radius:26px;padding:20px;box-shadow:var(--shadow)}
+.rt h3{font-size:17px;font-weight:800;display:flex;align-items:center;gap:8px}
+.rt h3 span{font-size:12px;font-weight:800;border-radius:999px;padding:0 10px;color:#fff;background:var(--green)}
+.rt.back h3 span{background:var(--sky)}
+.stops{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:0}
+.stops li{position:relative;padding:0 0 12px 26px;font-weight:700;font-size:15px}
+.stops li::before{content:"";position:absolute;left:4px;top:.55em;width:12px;height:12px;border-radius:50%;background:var(--paper);border:3px solid var(--green)}
+.rt.back .stops li::before{border-color:var(--sky)}
+.stops li::after{content:"";position:absolute;left:9px;top:1.45em;bottom:0;width:3px;background:var(--line)}
+.stops li:last-child{padding-bottom:0}
+.stops li:last-child::after{display:none}
+.stops small{display:block;font-weight:500;font-size:13px;color:var(--ink-soft)}
+.rest{
+  margin-top:14px;background:var(--sky-soft);border-radius:16px;padding:10px 14px;font-size:14px;
+}
+.rest b{font-family:var(--font-d)}
+
+/* ---------- points ---------- */
+.points{display:grid;gap:14px;max-width:680px;margin:0 auto}
+.pt{display:flex;gap:14px;align-items:flex-start;background:var(--bg);border-radius:22px;padding:16px 18px}
+.pt .m-ic{width:44px;height:44px}
+.pt .m-ic svg{width:24px;height:24px}
+.pt h3{font-size:16px;font-weight:800}
+.pt p{font-size:14.5px;color:var(--ink-soft)}
+.flow{
+  margin-top:24px;max-width:680px;margin-inline:auto;
+  background:var(--green-soft);border-radius:24px;padding:18px 20px;
+}
+.flow h3{font-size:15px;font-weight:800;margin-bottom:8px}
+.flow ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 4px;align-items:center}
+.flow li{font-family:var(--font-d);font-weight:700;font-size:14px;background:var(--paper);border-radius:999px;padding:2px 12px}
+.flow li.sl{background:var(--orange);color:#fff}
+.flow li.arrow{background:none;padding:0 2px;color:var(--ink-soft)}
+.flow + .flow{margin-top:12px;background:var(--sky-soft)}
+
+footer{text-align:center;padding-block:30px 40px;font-family:var(--font-d);font-weight:700;font-size:14px;color:var(--ink-soft)}
+footer b{color:var(--orange-deep)}
+.upd{display:block;margin-top:6px;font-size:12.5px;font-weight:500;font-variant-numeric:tabular-nums}
+.hero .draft{
+  margin-top:16px;max-width:30em;background:var(--paper);border:2px dashed var(--orange);border-radius:16px;
+  padding:8px 14px;font-size:13.5px;line-height:1.7;
+}
+.hero .draft b{
+  display:inline-block;margin-right:8px;background:var(--orange);color:#fff;border-radius:999px;
+  padding:0 10px;font-family:var(--font-d);font-size:12.5px;
+}
+.chip em{font-style:normal;font-size:12px;color:var(--ink-soft)}
+.hero .upd-top{margin-top:8px;font-size:12.5px;font-weight:500;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <span class="tag"><i></i>2026年10月 土日のどこか</span>
+      <p class="lead">2家族・車2台でいく日帰りおでかけ</p>
+      <h1><span class="ln">長瀞に</span><span class="ln"><span class="hl">SLを見に</span>いこう</span></h1>
+      <div class="hero-meta">
+        <span class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          8:00 出発<em>（暫定）</em>
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          埼玉・長瀞
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+          こども優先
+        </span>
+      </div>
+      <p class="draft"><b>仮プラン</b>時間や行き先はすべて今の時点の目安です。日程・出発時間も含めて、まだ変わります。</p>
+      <p class="upd-top">最終更新：<time datetime="2026-09-25">2026年9月25日</time></p>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 270" fill="none">
+        <!-- hills -->
+        <path d="M0 210 C60 150 120 150 180 190 C230 150 300 130 420 190 V270 H0Z" fill="var(--green-soft)"/>
+        <path d="M0 230 C90 200 170 215 250 225 C320 232 370 215 420 222 V270 H0Z" fill="var(--green)" opacity=".35"/>
+        <!-- autumn trees -->
+        <g stroke="var(--ink)" stroke-width="3" stroke-linejoin="round">
+          <path d="M42 205 v-18" stroke-linecap="round"/>
+          <circle cx="42" cy="172" r="20" fill="var(--orange)"/>
+          <path d="M372 200 v-16" stroke-linecap="round"/>
+          <circle cx="372" cy="170" r="17" fill="var(--pink)"/>
+          <path d="M396 206 v-12" stroke-linecap="round"/>
+          <circle cx="396" cy="184" r="12" fill="var(--orange)"/>
+        </g>
+        <!-- smoke -->
+        <g stroke="var(--ink)" stroke-width="3" fill="var(--paper)">
+          <circle class="puff d3" cx="150" cy="38" r="16"/>
+          <circle class="puff d2" cx="124" cy="62" r="13"/>
+          <circle class="puff" cx="106" cy="84" r="10"/>
+        </g>
+        <!-- rails -->
+        <path d="M20 236 H400" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+        <g stroke="var(--ink)" stroke-width="3" stroke-linecap="round">
+          <path d="M40 236v8M80 236v8M120 236v8M160 236v8M200 236v8M240 236v8M280 236v8M320 236v8M360 236v8"/>
+        </g>
+        <!-- locomotive -->
+        <g stroke="var(--ink)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+          <!-- cab -->
+          <rect x="228" y="108" width="84" height="96" rx="12" fill="var(--loco)"/>
+          <rect x="220" y="96" width="100" height="18" rx="8" fill="var(--loco)"/>
+          <rect x="244" y="124" width="26" height="26" rx="7" fill="var(--sky-soft)"/>
+          <rect x="278" y="124" width="22" height="26" rx="7" fill="var(--sky-soft)"/>
+          <!-- boiler -->
+          <rect x="94" y="140" width="146" height="64" rx="28" fill="var(--loco)"/>
+          <circle cx="98" cy="172" r="30" fill="var(--loco)"/>
+          <circle cx="92" cy="172" r="14" fill="var(--orange)"/>
+          <!-- chimney & dome -->
+          <path d="M110 140 V104 h28 V140" fill="var(--loco)"/>
+          <rect x="104" y="96" width="40" height="12" rx="5" fill="var(--loco)"/>
+          <path d="M168 140 c0-18 30-18 30 0" fill="var(--orange-deep)"/>
+          <!-- red band -->
+          <path d="M100 198 H310" stroke="#E0544F" stroke-width="5"/>
+          <!-- wheels -->
+          <circle cx="132" cy="212" r="20" fill="#E0544F"/>
+          <circle cx="132" cy="212" r="6" fill="var(--paper)"/>
+          <circle cx="184" cy="212" r="20" fill="#E0544F"/>
+          <circle cx="184" cy="212" r="6" fill="var(--paper)"/>
+          <circle cx="276" cy="216" r="16" fill="#E0544F"/>
+          <circle cx="276" cy="216" r="5" fill="var(--paper)"/>
+          <path d="M132 212 H184" stroke="var(--paper)" stroke-width="4"/>
+          <!-- cow catcher -->
+          <path d="M66 200 L80 222 H104 V200Z" fill="var(--loco)"/>
+          <!-- tender -->
+          <rect x="324" y="140" width="46" height="64" rx="10" fill="var(--loco)"/>
+          <circle cx="347" cy="218" r="14" fill="#E0544F"/>
+          <circle cx="347" cy="218" r="4" fill="var(--paper)"/>
+          <path d="M312 176 h12"/>
+        </g>
+        <!-- headlamp shine + cheeks -->
+        <circle cx="88" cy="167" r="4" fill="#fff"/>
+        <!-- little stars -->
+        <g fill="var(--orange)"><circle cx="46" cy="60" r="4"/><circle cx="210" cy="48" r="3"/><circle cx="360" cy="70" r="4"/></g>
+        <g fill="var(--sky)"><circle cx="70" cy="30" r="3"/><circle cx="300" cy="36" r="4"/></g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<svg class="wave" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true" style="background:var(--bg)"><path d="M0 36 C200 0 400 0 600 18 C800 36 1000 36 1200 6 V36Z" fill="currentColor"/></svg>
+
+<!-- ============ MEMBERS ============ -->
+<section class="sec-paper">
+  <div class="wrap">
+    <div class="sh"><div class="en">MEMBERS</div><h2>いっしょに行くひと</h2></div>
+    <div class="members">
+      <div class="m-card">
+        <div class="m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="8.5" r="2.5"/><path d="M2.5 19c.6-3.3 2.8-5 5.5-5s4.9 1.7 5.5 5M13.5 15.2c.9-.8 1.9-1.2 3-1.2 2.3 0 4 1.5 4.5 4.5"/></svg></div>
+        <div><h3>おとな</h3><p class="big">2家族</p></div>
+      </div>
+      <div class="m-card">
+        <div class="m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-4l2-5h14l2 5v4z"/><path d="M3 12h18"/><circle cx="7.5" cy="16.5" r="2"/><circle cx="16.5" cy="16.5" r="2"/></svg></div>
+        <div><h3>いどう</h3><p class="big">車2台</p></div>
+      </div>
+      <div class="m-card">
+        <div class="m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="11" r="7"/><path d="M9.5 10h.01M14.5 10h.01"/><path d="M10 13.5c1.1.8 2.9.8 4 0"/><path d="M12 4c0-1.5 1.5-2 2-1"/></svg></div>
+        <div>
+          <h3>こども（当日の月齢）</h3>
+          <p class="big">3人</p>
+          <div class="kids">
+            <span class="kid">2歳2〜3か月</span>
+            <span class="kid">1歳11か月〜2歳</span>
+            <span class="kid">7〜8か月</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true" style="background:var(--paper);color:var(--bg)"><path d="M0 36 C220 4 420 0 620 16 C820 32 1010 34 1200 8 V36Z" fill="currentColor"/></svg>
+
+<!-- ============ MAIN EVENT ============ -->
+<section class="sec-bg">
+  <div class="wrap">
+    <div class="sh"><div class="en">MAIN EVENT</div><h2>今日いちばんの目的</h2></div>
+    <div class="main-ev">
+      <span class="ribbon">ここだけは時間固定</span>
+      <div>
+        <h3>長瀞駅で<br>停車中のSLを近くで見る</h3>
+        <p class="sub">SLパレオエクスプレス</p>
+        <p class="main-note">走っているSLを一瞬見るより、<b>駅に停まっているSLをゆっくり</b>。小さい子でもじっくり見られます。</p>
+      </div>
+      <div>
+        <div class="clock">
+          <div class="t arr"><small>長瀞駅 到着</small><b>11:33</b></div>
+          <div class="mid">約9分<br>停車</div>
+          <div class="t"><small>長瀞駅 出発</small><b>11:42</b></div>
+        </div>
+        <p class="main-note"><b class="num">11:15</b>頃には長瀞駅へ向かう。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true" style="background:var(--bg)"><path d="M0 36 C200 0 400 0 600 18 C800 36 1000 36 1200 6 V36Z" fill="currentColor"/></svg>
+
+<!-- ============ SCHEDULE ============ -->
+<section class="sec-paper" id="schedule">
+  <div class="wrap">
+    <div class="sh"><div class="en">SCHEDULE</div><h2>当日のながれ</h2></div>
+
+    <div class="switch" role="group" aria-label="プランの切りかえ">
+      <button type="button" id="btn-base" aria-pressed="true" data-plan="base">基本プラン</button>
+      <button type="button" id="btn-late" aria-pressed="false" data-plan="late">到着が遅れたら</button>
+    </div>
+    <p class="sw-note" id="sw-note"></p>
+
+    <ol class="tl" id="tl"></ol>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true" style="background:var(--paper);color:var(--bg)"><path d="M0 36 C220 4 420 0 620 16 C820 32 1010 34 1200 8 V36Z" fill="currentColor"/></svg>
+
+<!-- ============ AFTERNOON ============ -->
+<section class="sec-bg" id="afternoon" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="sh"><div class="en">AFTERNOON</div><h2>午後はその場でえらぶ</h2></div>
+    <p class="pm-lead">午前中にSLを見られたら目標達成。<br>昼寝・つかれ具合・お天気を見て、3つから選びます。</p>
+    <div class="pm" style="--card:var(--paper)">
+      <article class="pm-card a" style="background:var(--paper)">
+        <div class="pm-top"><span class="pm-badge">A</span><div><h3>長瀞でのんびり</h3><p class="when">移動を増やさず、そのまま周辺で</p></div></div>
+        <ul>
+          <li>午前に行けなかったら岩畳へ</li>
+          <li>岩畳・長瀞周辺をおさんぽ</li>
+          <li>おやつ・カフェで休憩</li>
+          <li>こどもたちのペースで</li>
+        </ul>
+        <div class="bonus">
+          <b>もう1回SLに会える</b><br>
+          <span class="num">15:07</span>頃 長瀞駅着 → <span class="num">15:13</span>頃 発<br>
+          午前とは逆向きのSL。気に入っていたら候補に。
+        </div>
+      </article>
+      <article class="pm-card b" style="background:var(--paper)">
+        <div class="pm-top"><span class="pm-badge">B</span><div><h3>宝登山のほうへ</h3><p class="when">SLもランチも順調で、まだ元気なとき</p></div></div>
+        <ul>
+          <li>寳登山神社</li>
+          <li>宝登山ロープウェイ</li>
+          <li>山頂周辺</li>
+          <li>宝登山小動物公園</li>
+        </ul>
+        <p class="pm-foot">全部は回らず1〜2か所だけ。ロープウェイを楽しめそうならこちら。</p>
+      </article>
+      <article class="pm-card c" style="background:var(--paper)">
+        <div class="pm-top"><span class="pm-badge">C</span><div><h3>むりしない</h3><p class="when">朝8時出発＋車＋SL＋ランチで、つかれていたら</p></div></div>
+        <ul>
+          <li>車でお昼寝</li>
+          <li>駅のまわりを少しだけ散策</li>
+          <li>おみやげを見る</li>
+          <li>カフェで休憩</li>
+          <li>そのまま早めに帰る</li>
+        </ul>
+        <p class="pm-foot">「せっかく来たから全部」ではなく、SLが見られたらOK。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true" style="background:var(--bg)"><path d="M0 36 C200 0 400 0 600 18 C800 36 1000 36 1200 6 V36Z" fill="currentColor"/></svg>
+
+<!-- ============ ROUTE ============ -->
+<section class="sec-paper" style="background:var(--green-soft)">
+  <div class="wrap">
+    <div class="sh"><div class="en">ROUTE</div><h2>行き・帰りのみち</h2></div>
+    <div class="route">
+      <div class="rt">
+        <h3><span>行き</span>8:00出発（暫定）→ 10:00〜10:30着</h3>
+        <ol class="stops">
+          <li>自宅<small>下道で所沢ICへ</small></li>
+          <li>所沢IC</li>
+          <li>関越自動車道</li>
+          <li>花園IC<small>国道140号方面へ</small></li>
+          <li>長瀞</li>
+        </ol>
+        <div class="rest"><b>休憩は1回以上</b>（おむつ替え・ミルク）<br>関越道のSA・PA、または花園ICを降りて山道に入る前のスーパーやホームセンター。こどもの様子で追加もOK。</div>
+      </div>
+      <div class="rt back">
+        <h3><span>帰り</span>午後の過ごし方しだい</h3>
+        <ol class="stops">
+          <li>長瀞</li>
+          <li>花園IC</li>
+          <li>関越道</li>
+          <li>所沢IC<small>下道で帰宅</small></li>
+          <li>自宅</li>
+        </ol>
+        <div class="rest"><b>帰りも同じく</b>、こどもの様子を見ながら必要に応じて休憩。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true" style="background:var(--green-soft);color:var(--paper)"><path d="M0 36 C220 4 420 0 620 16 C820 32 1010 34 1200 8 V36Z" fill="currentColor"/></svg>
+
+<!-- ============ POINTS ============ -->
+<section class="sec-paper">
+  <div class="wrap">
+    <div class="sh"><div class="en">POINT</div><h2>今回のポイント</h2></div>
+    <div class="points">
+      <div class="pt">
+        <div class="m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div><h3>SLの時間だけ固定</h3><p>岩畳・ランチ・午後の観光は、こどもの様子に合わせて前後させる。</p></div>
+      </div>
+      <div class="pt">
+        <div class="m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19l5-9 4 6 3-4 6 7z"/><circle cx="17" cy="6" r="2"/></svg></div>
+        <div><h3>岩畳は抱っこ紐で</h3><p>天然の岩場で段差や凸凹が多いので、岩場まで下りるならベビーカーより抱っこ紐。長居はせず、短時間のおさんぽ程度。</p></div>
+      </div>
+      <div class="pt">
+        <div class="m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16a8 8 0 0 1-16 0z"/><path d="M8 7c0-1.5 1-1.5 1-3M12 7c0-1.5 1-1.5 1-3M16 7c0-1.5 1-1.5 1-3"/></svg></div>
+        <div><h3>ランチはこども連れで入りやすいお店</h3><p>蕎麦も候補。ただしアレルギー面も考えて、蕎麦専門店に限らず他のメニューも選べるお店を探す。</p></div>
+      </div>
+    </div>
+
+    <div class="flow">
+      <h3>基本のながれ</h3>
+      <ol>
+        <li>8:00出発（暫定）</li><li class="arrow">›</li><li>休憩</li><li class="arrow">›</li><li>長瀞</li><li class="arrow">›</li><li>岩畳</li><li class="arrow">›</li><li class="sl">SL</li><li class="arrow">›</li><li>ランチ</li><li class="arrow">›</li><li>午後A/B/C</li><li class="arrow">›</li><li>帰宅</li>
+      </ol>
+    </div>
+    <div class="flow">
+      <h3>到着が遅れたら</h3>
+      <ol>
+        <li>8:00出発（暫定）</li><li class="arrow">›</li><li>休憩</li><li class="arrow">›</li><li>長瀞</li><li class="arrow">›</li><li class="sl">SL</li><li class="arrow">›</li><li>ランチ</li><li class="arrow">›</li><li>岩畳 or 午後A/B/C</li><li class="arrow">›</li><li>帰宅</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<footer class="sec-bg">SLが見られたら、<b>それで大成功。</b><span class="upd">最終更新：<time datetime="2026-09-25">2026年9月25日</time></span></footer>
+
+<script>
+(function(){
+  var I = {
+    home:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-6 8 6v8H4z"/><path d="M10 19v-5h4v5"/></svg>',
+    car:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-4l2-5h14l2 5v4z"/><path d="M3 12h18"/><circle cx="7.5" cy="16.5" r="2"/><circle cx="16.5" cy="16.5" r="2"/></svg>',
+    bottle:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3h4v3h-4z"/><path d="M9 6h6l1 3v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V9z"/><path d="M8 12h8"/></svg>',
+    pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+    rock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19l5-9 4 6 3-4 6 7z"/></svg>',
+    walk:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4.5" r="1.8"/><path d="M11 21l2-6-3-3 1-5 4 3 3 1M9 12l-2 3"/></svg>',
+    train:'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="12" rx="3"/><path d="M5 10h14"/><circle cx="9" cy="13" r=".6"/><circle cx="15" cy="13" r=".6"/><path d="M8 20l2-4M16 20l-2-4"/></svg>',
+    bowl:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16a8 8 0 0 1-16 0z"/><path d="M8 7c0-1.5 1-1.5 1-3M12 7c0-1.5 1-1.5 1-3M16 7c0-1.5 1-1.5 1-3"/></svg>',
+    leaf:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19C5 10 10 5 20 4c-1 10-6 15-15 15z"/><path d="M5 19l8-8"/></svg>'
+  };
+
+  var common_head = [
+    {t:'8:00（暫定）', h:'出発', p:'下道 → 所沢IC → 関越道 → 花園IC → 国道140号方面', ic:'home'},
+    {t:'途中', h:'休憩（1回以上）', p:'おむつ替え・ミルクなど。関越道のSA・PA、または花園ICを降りて山道に入る前のスーパーやホームセンター。', ic:'bottle', soft:true}
+  ];
+  var sl = {t:'11:33〜11:42', h:'SLパレオエクスプレス 長瀞駅に停車', p:'約9分停車。ここで子どもたちにSLを見せる。', ic:'train', star:true};
+  var lunch = {t:'12:00頃', h:'ランチ', p:'長瀞駅周辺。子連れで入りやすく、蕎麦以外のメニューも選べるお店。', ic:'bowl'};
+  var home = {t:'夕方', h:'帰宅', p:'花園IC → 関越道 → 所沢IC → 下道。帰りも様子を見て休憩。', ic:'car'};
+
+  var plans = {
+    base:{
+      note:'10:00〜10:30に長瀞に着けたらこちら。',
+      items: common_head.concat([
+        {t:'10:00〜10:30', h:'長瀞到着', p:'車を停めたまま、歩いて移動。', ic:'pin'},
+        {t:'時間に余裕があれば', h:'岩畳をおさんぽ', p:'長瀞駅から徒歩圏内。長居はせず、時間調整くらいの気持ちで。', ic:'rock', memo:'岩場まで下りるならベビーカーより抱っこ紐'},
+        {t:'11:15頃', h:'長瀞駅へ', p:'SLの到着に合わせて駅へ移動。', ic:'walk'},
+        sl, lunch,
+        {t:'午後', h:'A・B・C からえらぶ', p:'昼寝・つかれ具合・天気しだい。', ic:'leaf', link:true},
+        home
+      ])
+    },
+    late:{
+      note:'10:30〜11:00の到着になったら、岩畳は後回しにして駅を優先。',
+      items: common_head.concat([
+        {t:'10:30〜11:00', h:'長瀞到着', p:'岩畳には寄らず、そのまま駅方面へ。', ic:'pin'},
+        {t:'11:15頃', h:'長瀞駅へ', p:'SLの到着に合わせて駅へ移動。', ic:'walk'},
+        sl, lunch,
+        {t:'午後', h:'岩畳 または A・B・C', p:'午前に行けなかった岩畳は午後に。こどもの様子で決める。', ic:'rock', link:true, memo:'岩場まで下りるならベビーカーより抱っこ紐'},
+        home
+      ])
+    }
+  };
+
+  var tl = document.getElementById('tl');
+  var note = document.getElementById('sw-note');
+  var btns = document.querySelectorAll('.switch button');
+
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+
+  function render(key){
+    var plan = plans[key];
+    note.textContent = plan.note;
+    tl.innerHTML = plan.items.map(function(it){
+      var cls = it.star ? 'star' : (it.soft ? 'soft' : '');
+      var h = esc(it.h);
+      if (it.link) h = '<a href="#afternoon" style="color:inherit">'+h+'</a>';
+      return '<li class="'+cls+'"><div class="dot">'+I[it.ic]+'</div><div class="card">'+
+        '<span class="time">'+esc(it.t)+'</span><h3>'+h+'</h3><p>'+esc(it.p)+'</p>'+
+        (it.memo ? '<div class="memo">'+esc(it.memo)+'</div>' : '')+
+        '</div></li>';
+    }).join('');
+    btns.forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.plan===key ? 'true':'false'); });
+    try{ localStorage.setItem('nagatoro-plan', key); }catch(e){}
+  }
+
+  btns.forEach(function(b){ b.addEventListener('click', function(){ render(b.dataset.plan); }); });
+
+  var start = 'base';
+  if (location.hash === '#late') start = 'late';
+  else { try{ var s = localStorage.getItem('nagatoro-plan'); if (s && plans[s]) start = s; }catch(e){} }
+  render(start);
+})();
+</script>
+</body>
+</html>
