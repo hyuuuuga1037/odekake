@@ -243,6 +243,10 @@ section{padding-block:36px 44px}
   margin-top:auto;background:var(--paper);border-radius:16px;padding:10px 14px;font-size:14px;
   border:2px solid var(--orange);
 }
+a.ext{color:var(--green-deep);font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--green)}
+a.ext::after{content:"↗";font-size:.8em;margin-left:2px;text-decoration:none;display:inline-block}
+a.ext:focus-visible{outline:3px solid var(--orange);outline-offset:2px;border-radius:4px}
+.tl-link{display:inline-block;margin-top:8px;font-size:13.5px}
 .bonus b{font-family:var(--font-d);color:var(--orange-deep)}
 .bonus .num{font-weight:800}
 .pm-foot{font-size:13.5px;color:var(--ink-soft)}
@@ -436,7 +440,7 @@ footer b{color:var(--orange-deep)}
       <span class="ribbon">ここだけは時間固定</span>
       <div>
         <h3>長瀞駅で<br>停車中のSLを近くで見る</h3>
-        <p class="sub">SLパレオエクスプレス</p>
+        <p class="sub">SLパレオエクスプレス　<a class="ext" href="https://www.chichibu-railway.co.jp/slpaleo/calendar.html" target="_blank" rel="noopener">運転日・時刻（秩父鉄道）</a></p>
         <p class="main-note">走っているSLを一瞬見るより、<b>駅に停まっているSLをゆっくり</b>。小さい子でもじっくり見られます。</p>
       </div>
       <div>
@@ -493,10 +497,10 @@ footer b{color:var(--orange-deep)}
       <article class="pm-card b" style="background:var(--paper)">
         <div class="pm-top"><span class="pm-badge">B</span><div><h3>宝登山のほうへ</h3><p class="when">SLもランチも順調で、まだ元気なとき</p></div></div>
         <ul>
-          <li>寳登山神社</li>
-          <li>宝登山ロープウェイ</li>
+          <li><a class="ext" href="https://www.hodosan-jinja.or.jp/" target="_blank" rel="noopener">寳登山神社</a></li>
+          <li><a class="ext" href="https://hodosan-ropeway.co.jp/" target="_blank" rel="noopener">宝登山ロープウェイ</a></li>
           <li>山頂周辺</li>
-          <li>宝登山小動物公園</li>
+          <li><a class="ext" href="https://hodosan-ropeway.co.jp/zoo/" target="_blank" rel="noopener">宝登山小動物公園</a></li>
         </ul>
         <p class="pm-foot">全部は回らず1〜2か所だけ。ロープウェイを楽しめそうならこちら。</p>
       </article>
@@ -613,7 +617,7 @@ footer b{color:var(--orange-deep)}
       note:'10:00〜10:30に長瀞に着けたらこちら。',
       items: common_head.concat([
         {t:'10:00〜10:30', h:'長瀞到着', p:'車を停めたまま、歩いて移動。', ic:'pin'},
-        {t:'時間に余裕があれば', h:'岩畳をおさんぽ', p:'長瀞駅から徒歩圏内。長居はせず、時間調整くらいの気持ちで。', ic:'rock', memo:'岩場まで下りるならベビーカーより抱っこ紐'},
+        {t:'時間に余裕があれば', h:'岩畳をおさんぽ', p:'長瀞駅から徒歩圏内。長居はせず、時間調整くらいの気持ちで。', ic:'rock', memo:'岩場まで下りるならベビーカーより抱っこ紐', url:'https://www.nagatoro.gr.jp/area/m_iwadatami/', urlText:'岩畳のこと（長瀞町観光協会）'},
         {t:'11:15頃', h:'長瀞駅へ', p:'SLの到着に合わせて駅へ移動。', ic:'walk'},
         sl, lunch,
         {t:'午後', h:'A・B・C からえらぶ', p:'昼寝・つかれ具合・天気しだい。', ic:'leaf', link:true},
@@ -626,7 +630,7 @@ footer b{color:var(--orange-deep)}
         {t:'10:30〜11:00', h:'長瀞到着', p:'岩畳には寄らず、そのまま駅方面へ。', ic:'pin'},
         {t:'11:15頃', h:'長瀞駅へ', p:'SLの到着に合わせて駅へ移動。', ic:'walk'},
         sl, lunch,
-        {t:'午後', h:'岩畳 または A・B・C', p:'午前に行けなかった岩畳は午後に。こどもの様子で決める。', ic:'rock', link:true, memo:'岩場まで下りるならベビーカーより抱っこ紐'},
+        {t:'午後', h:'岩畳 または A・B・C', p:'午前に行けなかった岩畳は午後に。こどもの様子で決める。', ic:'rock', link:true, memo:'岩場まで下りるならベビーカーより抱っこ紐', url:'https://www.nagatoro.gr.jp/area/m_iwadatami/', urlText:'岩畳のこと（長瀞町観光協会）'},
         home
       ])
     }
@@ -648,6 +652,7 @@ footer b{color:var(--orange-deep)}
       return '<li class="'+cls+'"><div class="dot">'+I[it.ic]+'</div><div class="card">'+
         '<span class="time">'+esc(it.t)+'</span><h3>'+h+'</h3><p>'+esc(it.p)+'</p>'+
         (it.memo ? '<div class="memo">'+esc(it.memo)+'</div>' : '')+
+        (it.url ? '<a class="ext tl-link" href="'+esc(it.url)+'" target="_blank" rel="noopener">'+esc(it.urlText)+'</a>' : '')+
         '</div></li>';
     }).join('');
     btns.forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.plan===key ? 'true':'false'); });
