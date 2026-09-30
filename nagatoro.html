@@ -239,6 +239,11 @@ section{padding-block:36px 44px}
 .pm-card.a li::before{background:var(--green)}
 .pm-card.b li::before{background:var(--sky)}
 .pm-card.c li::before{background:var(--pink)}
+.pm-card.d .pm-badge{background:var(--orange)}
+.pm-card.d li::before{background:var(--orange)}
+.pm-card.e .pm-badge{background:var(--green-deep)}
+.pm-card.e li::before{background:var(--green-deep)}
+.pm-card h3 a.ext{color:inherit}
 .bonus{
   margin-top:auto;background:var(--paper);border-radius:16px;padding:10px 14px;font-size:14px;
   border:2px solid var(--orange);
@@ -541,21 +546,23 @@ footer b{color:var(--orange-deep)}
 <section class="sec-bg" id="afternoon" style="background:var(--bg)">
   <div class="wrap">
     <div class="sh"><div class="en">AFTERNOON</div><h2>午後はその場でえらぶ</h2></div>
-    <p class="pm-lead">午前中にSLを見られたら目標達成。<br>昼寝・つかれ具合・お天気を見て、3つから選びます。</p>
+    <p class="pm-lead">午前中にSLを見られたら目標達成。<br>昼寝・つかれ具合・お天気を見て、A〜Eから選びます。</p>
     <div class="pm" style="--card:var(--paper)">
       <article class="pm-card a" style="background:var(--paper)">
-        <div class="pm-top"><span class="pm-badge">A</span><div><h3>長瀞でのんびり</h3><p class="when">移動を増やさず、そのまま周辺で</p></div></div>
+        <div class="pm-top"><span class="pm-badge">A</span><div><h3>長瀞でのんびり</h3><p class="when">移動を増やさず、そのまま周辺で。つかれていたらこれ</p></div></div>
         <ul>
           <li>午前に行けなかったら岩畳へ</li>
-          <li>岩畳・長瀞周辺をおさんぽ</li>
-          <li>おやつ・カフェで休憩（<a class="ext-in" href="#meibutsu">名物を見る</a>）</li>
-          <li>こどもたちのペースで</li>
+          <li>岩畳・駅のまわりをおさんぽ</li>
+          <li>おやつ・カフェ・おみやげ（<a class="ext-in" href="#meibutsu">名物を見る</a>）</li>
+          <li>車でお昼寝</li>
+          <li>つかれていたら、そのまま早めに帰る</li>
         </ul>
         <div class="bonus">
           <b>もう1回SLに会える</b><br>
           <span class="num">15:07</span>頃 長瀞駅着 → <span class="num">15:13</span>頃 発<br>
           午前とは逆向きのSL。気に入っていたら候補に。
         </div>
+        <p class="pm-foot">「せっかく来たから全部」ではなく、SLが見られたらOK。</p>
       </article>
       <article class="pm-card b" style="background:var(--paper)">
         <div class="pm-top"><span class="pm-badge">B</span><div><h3>宝登山のほうへ</h3><p class="when">SLもランチも順調で、まだ元気なとき</p></div></div>
@@ -581,15 +588,33 @@ footer b{color:var(--orange-deep)}
         </details>
       </article>
       <article class="pm-card c" style="background:var(--paper)">
-        <div class="pm-top"><span class="pm-badge">C</span><div><h3>むりしない</h3><p class="when">朝8時出発＋車＋SL＋ランチで、つかれていたら</p></div></div>
+        <div class="pm-top"><span class="pm-badge">C</span><div><h3><a class="ext" href="https://shizen.spec.ed.jp/" target="_blank" rel="noopener">埼玉県立自然の博物館</a></h3><p class="when">長瀞町内・車で約3分。雨の日にも</p></div></div>
         <ul>
-          <li>車でお昼寝</li>
-          <li>駅のまわりを少しだけ散策</li>
-          <li>おみやげを見る</li>
-          <li>カフェで休憩</li>
-          <li>そのまま早めに帰る</li>
+          <li>SLの名前の由来「パレオパラドキシア」の骨格がある</li>
+          <li>屋内なので天気を気にしなくていい</li>
+          <li>授乳室・おむつ替え台あり、ベビーカーOK</li>
+          <li>大人200円、中学生以下は無料</li>
         </ul>
-        <p class="pm-foot">「せっかく来たから全部」ではなく、SLが見られたらOK。</p>
+        <p class="pm-foot">9:00〜16:30（入館は16:00まで）。駐車場は31台と少なめ。帰りは長瀞から帰るのと同じ。</p>
+      </article>
+      <article class="pm-card d" style="background:var(--paper)">
+        <div class="pm-top"><span class="pm-badge">D</span><div><h3><a class="ext" href="https://www.premiumoutlets.co.jp/fukayahanazono/kidscare/" target="_blank" rel="noopener">ふかや花園プレミアム・アウトレット</a></h3><p class="when">帰り道の途中（花園ICのそば）・車で約18分</p></div></div>
+        <ul>
+          <li>子どもの遊び場「あそぼ！ガリガリ君」（入場無料、アトラクションは有料）</li>
+          <li>靴を脱いで座れるマット席のあるフードコート</li>
+          <li>ベビーカー貸し出し（4か月〜4歳未満）</li>
+          <li>ベビールーム2か所</li>
+        </ul>
+        <p class="pm-foot">10:00〜20:00。早めの夕食を済ませて帰るのもあり。家に近い所から帰れるので楽。</p>
+      </article>
+      <article class="pm-card e" style="background:var(--paper)">
+        <div class="pm-top"><span class="pm-badge">E</span><div><h3><a class="ext" href="https://www.muse-park.com/" target="_blank" rel="noopener">秩父ミューズパーク</a></h3><p class="when">帰りと逆の秩父方面・車で約17分</p></div></div>
+        <ul>
+          <li>入園・駐車場とも無料</li>
+          <li>小さい子向けの遊具がある「展望ちびっ子広場」</li>
+          <li>園内を走る汽車「スカイトレイン」</li>
+        </ul>
+        <p class="pm-foot">帰りは長瀞まで戻る分、遠回り。</p>
       </article>
     </div>
   </div>
@@ -694,13 +719,13 @@ footer b{color:var(--orange-deep)}
     <div class="flow">
       <h3>基本のながれ</h3>
       <ol>
-        <li>8:00出発（暫定）</li><li class="arrow">›</li><li>休憩</li><li class="arrow">›</li><li>長瀞</li><li class="arrow">›</li><li>岩畳</li><li class="arrow">›</li><li class="sl">SL</li><li class="arrow">›</li><li>ランチ</li><li class="arrow">›</li><li>午後A/B/C</li><li class="arrow">›</li><li>帰宅</li>
+        <li>8:00出発（暫定）</li><li class="arrow">›</li><li>休憩</li><li class="arrow">›</li><li>長瀞</li><li class="arrow">›</li><li>岩畳</li><li class="arrow">›</li><li class="sl">SL</li><li class="arrow">›</li><li>ランチ</li><li class="arrow">›</li><li>午後A〜E</li><li class="arrow">›</li><li>帰宅</li>
       </ol>
     </div>
     <div class="flow">
       <h3>到着が遅れたら</h3>
       <ol>
-        <li>8:00出発（暫定）</li><li class="arrow">›</li><li>休憩</li><li class="arrow">›</li><li>長瀞</li><li class="arrow">›</li><li class="sl">SL</li><li class="arrow">›</li><li>ランチ</li><li class="arrow">›</li><li>岩畳 or 午後A/B/C</li><li class="arrow">›</li><li>帰宅</li>
+        <li>8:00出発（暫定）</li><li class="arrow">›</li><li>休憩</li><li class="arrow">›</li><li>長瀞</li><li class="arrow">›</li><li class="sl">SL</li><li class="arrow">›</li><li>ランチ</li><li class="arrow">›</li><li>岩畳 or 午後A〜E</li><li class="arrow">›</li><li>帰宅</li>
       </ol>
     </div>
   </div>
@@ -860,7 +885,7 @@ footer b{color:var(--orange-deep)}
         {t:'時間に余裕があれば', h:'岩畳をおさんぽ', p:'長瀞駅から徒歩圏内。長居はせず、時間調整くらいの気持ちで。', ic:'rock', memo:'岩場まで下りるならベビーカーより抱っこ紐', url:'https://www.nagatoro.gr.jp/area/m_iwadatami/', urlText:'岩畳のこと（長瀞町観光協会）'},
         {t:'11:15頃', h:'長瀞駅へ', p:'SLの到着に合わせて駅へ移動。', ic:'walk'},
         sl, lunch,
-        {t:'午後', h:'A・B・C からえらぶ', p:'昼寝・つかれ具合・天気しだい。', ic:'leaf', link:true},
+        {t:'午後', h:'A〜E からえらぶ', p:'昼寝・つかれ具合・天気しだい。', ic:'leaf', link:true},
         home
       ])
     },
@@ -870,7 +895,7 @@ footer b{color:var(--orange-deep)}
         {t:'10:30〜11:00', h:'長瀞到着', p:'岩畳には寄らず、そのまま駅方面へ。', ic:'pin'},
         {t:'11:15頃', h:'長瀞駅へ', p:'SLの到着に合わせて駅へ移動。', ic:'walk'},
         sl, lunch,
-        {t:'午後', h:'岩畳 または A・B・C', p:'午前に行けなかった岩畳は午後に。こどもの様子で決める。', ic:'rock', link:true, memo:'岩場まで下りるならベビーカーより抱っこ紐', url:'https://www.nagatoro.gr.jp/area/m_iwadatami/', urlText:'岩畳のこと（長瀞町観光協会）'},
+        {t:'午後', h:'岩畳 または A〜E', p:'午前に行けなかった岩畳は午後に。こどもの様子で決める。', ic:'rock', link:true, memo:'岩場まで下りるならベビーカーより抱っこ紐', url:'https://www.nagatoro.gr.jp/area/m_iwadatami/', urlText:'岩畳のこと（長瀞町観光協会）'},
         home
       ])
     }
