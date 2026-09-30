@@ -322,6 +322,36 @@ footer{text-align:center;padding-block:30px 40px;font-family:var(--font-d);font-
 .om h4{margin:0;font-family:var(--font-d);font-size:15px;font-weight:800}
 .om-where{font-size:12px;font-weight:700;color:var(--green-deep);margin-top:2px}
 .om p:last-child{font-size:13.5px;color:var(--ink-soft);line-height:1.7;margin-top:4px}
+/* ---------- nursing ---------- */
+.jn-best{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-bottom:18px}
+.jb{background:var(--pink-soft);border-radius:18px;padding:10px 14px;display:flex;flex-direction:column;gap:2px}
+.jb-k{font-family:var(--font-d);font-weight:800;font-size:12px;color:var(--ink-soft);letter-spacing:.08em}
+.jb b{font-family:var(--font-d);font-size:16px}
+.jb small{font-size:12px;color:var(--ink-soft)}
+.jn-list{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.jn{background:var(--paper);border-radius:22px;padding:16px 18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px}
+.jn-head{display:flex;gap:12px;align-items:center}
+.jn .m-ic{width:44px;height:44px}
+.jn .m-ic svg{width:24px;height:24px}
+.jn-area{font-size:12px;font-weight:700;color:var(--ink-soft);line-height:1.4}
+.jn h3{font-size:16px;font-weight:800;line-height:1.4}
+.jn-tags{display:flex;gap:6px;flex-wrap:wrap}
+.dir{font-family:var(--font-d);font-weight:800;font-size:12px;border-radius:999px;padding:0 10px;color:#fff}
+.dir.go{background:var(--green-deep)}
+.dir.back{background:var(--sky);color:#1f3440}
+.dir.no{background:var(--line);color:var(--ink)}
+.dir.here{background:var(--orange-deep)}
+.jn p{font-size:14px;line-height:1.7}
+.jn-links{margin-top:auto !important;display:flex;gap:14px;flex-wrap:wrap;font-size:13.5px !important}
+.jn-note{text-align:center;font-size:13.5px;color:var(--ink-soft);margin-top:16px}
+.il{flex:none;width:64px;height:64px;border-radius:50%;background:var(--bg);display:grid;place-items:center;align-self:flex-start}
+.il svg{width:46px;height:46px;overflow:visible}
+.mb{display:grid !important;grid-template-columns:64px 1fr;column-gap:14px;align-items:start}
+.mb .il{grid-row:1 / span 3}
+.mb > *:not(.il){grid-column:2}
+.om{display:flex;gap:12px;align-items:flex-start}
+.il.sm{width:52px;height:52px;background:var(--green-soft)}
+.il.sm svg{width:38px;height:38px}
 footer b{color:var(--orange-deep)}
 .upd{display:block;margin-top:6px;font-size:12.5px;font-weight:500;font-variant-numeric:tabular-nums}
 .hero .draft{
@@ -581,7 +611,7 @@ footer b{color:var(--orange-deep)}
           <li>花園IC<small>国道140号方面へ</small></li>
           <li>長瀞</li>
         </ol>
-        <div class="rest"><b>休憩は1回以上</b>（おむつ替え・ミルク）<br>関越道のSA・PA、または花園ICを降りて山道に入る前のスーパーやホームセンター。こどもの様子で追加もOK。</div>
+        <div class="rest"><b>休憩は1回以上</b>（おむつ替え・ミルク）<br>関越道のSA・PA、または花園ICを降りて山道に入る前のスーパーやホームセンター。こどもの様子で追加もOK。<br><a class="ext-in" href="#junyu">授乳室マップを見る</a></div>
       </div>
       <div class="rt back">
         <h3><span>帰り</span>午後の過ごし方しだい</h3>
@@ -598,7 +628,49 @@ footer b{color:var(--orange-deep)}
   </div>
 </section>
 
-<svg class="wave" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true" style="background:var(--green-soft);color:var(--paper)"><path d="M0 36 C220 4 420 0 620 16 C820 32 1010 34 1200 8 V36Z" fill="currentColor"/></svg>
+<svg class="wave" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true" style="background:var(--green-soft);color:var(--bg)"><path d="M0 36 C220 4 420 0 620 16 C820 32 1010 34 1200 8 V36Z" fill="currentColor"/></svg>
+
+<!-- ============ NURSING ============ -->
+<section class="sec-bg" id="junyu">
+  <div class="wrap">
+    <div class="sh"><div class="en">BABY ROOM</div><h2>授乳室マップ</h2></div>
+    <div class="jn-best">
+      <div class="jb"><span class="jb-k">行き</span><b>高坂SA（下り）</b></div>
+      <div class="jb"><span class="jb-k">長瀞</span><b>駅前の観光案内所</b></div>
+      <div class="jb"><span class="jb-k">帰り</span><b>高坂SA・三芳PA（上り）</b><small>アウトレットも可</small></div>
+    </div>
+
+    <div class="jn-list">
+      <article class="jn">
+        <div class="jn-head"><div class="m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3h4v3h-4z"/><path d="M9 6h6l1 3v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V9z"/><path d="M8 12h8"/></svg></div><div><p class="jn-area">関越道</p><h3>高坂SA</h3></div></div>
+        <div class="jn-tags"><span class="dir go">行き ○</span><span class="dir back">帰り ○</span></div>
+        <p>鍵のかかる個室の授乳室、おむつ替え台、調乳用のお湯。行きの休憩にちょうどいい位置。</p>
+        <p class="jn-links"><a class="ext" href="https://www.driveplaza.com/sapa/1800/1800031/2/" target="_blank" rel="noopener">下り（行き）</a><a class="ext" href="https://www.driveplaza.com/sapa/1800/1800031/1/" target="_blank" rel="noopener">上り（帰り）</a></p>
+      </article>
+      <article class="jn">
+        <div class="jn-head"><div class="m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3h4v3h-4z"/><path d="M9 6h6l1 3v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V9z"/><path d="M8 12h8"/></svg></div><div><p class="jn-area">関越道</p><h3>三芳PA</h3></div></div>
+        <div class="jn-tags"><span class="dir go">行き ○</span><span class="dir back">帰り ○</span></div>
+        <p>設備は高坂SAと同じ。行きは所沢ICに乗ってすぐなので、帰りの最後の休憩向き。</p>
+        <p class="jn-links"><a class="ext" href="https://www.driveplaza.com/sapa/1800/1800011/2/" target="_blank" rel="noopener">下り（行き）</a><a class="ext" href="https://www.driveplaza.com/sapa/1800/1800011/1/" target="_blank" rel="noopener">上り（帰り）</a></p>
+      </article>
+      <article class="jn">
+        <div class="jn-head"><div class="m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3h4v3h-4z"/><path d="M9 6h6l1 3v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V9z"/><path d="M8 12h8"/></svg></div><div><p class="jn-area">花園IC付近（ICから約1.5km）</p><h3>ふかや花園プレミアム・アウトレット</h3></div></div>
+        <div class="jn-tags"><span class="dir no">行き △</span><span class="dir back">帰り ○</span></div>
+        <p>ベビールーム2か所（女性専用の授乳室、調乳用のお湯、電子レンジ、男性も使える家族室）。営業は10:00〜20:00なので、行きは開店前。</p>
+        <p class="jn-links"><a class="ext" href="https://www.premiumoutlets.co.jp/fukayahanazono/kidscare/" target="_blank" rel="noopener">ベビールームの案内</a></p>
+      </article>
+      <article class="jn">
+        <div class="jn-head"><div class="m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3h4v3h-4z"/><path d="M9 6h6l1 3v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V9z"/><path d="M8 12h8"/></svg></div><div><p class="jn-area">長瀞駅前</p><h3>長瀞町観光案内所</h3></div></div>
+        <div class="jn-tags"><span class="dir here">現地</span></div>
+        <p>「長瀞町観光情報館」1階。授乳室の貸し出しとお湯の提供あり。9:00〜17:00。</p>
+        <p class="jn-links"><a class="ext" href="https://www.nagatoro.gr.jp/%E9%95%B7%E7%80%9E%E7%94%BA%E8%A6%B3%E5%85%89%E6%A1%88%E5%86%85%E6%89%80/" target="_blank" rel="noopener">観光案内所の案内</a></p>
+      </article>
+    </div>
+    <p class="jn-note">嵐山PAはNEXCOの授乳室一覧に載っていないので、授乳の予定は高坂SAか三芳PAで。</p>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true" style="background:var(--bg);color:var(--paper)"><path d="M0 36 C200 0 400 0 600 18 C800 36 1000 36 1200 6 V36Z" fill="currentColor"/></svg>
 
 <!-- ============ POINTS ============ -->
 <section class="sec-paper">
@@ -646,32 +718,32 @@ footer b{color:var(--orange-deep)}
 
     <h3 class="mb-h">食べる</h3>
     <div class="mb-grid">
-      <article class="mb">
+      <article class="mb"><div class="il"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="24" cy="24" rx="17" ry="5" fill="#FFF"/><path d="M11 23c3-5 9-6 13-4M22 22c4-4 10-4 14 0" fill="#C8743A"/><path d="M12 24c4-3 10-3 13-1 3-3 9-3 12 1" fill="#B8612B"/><path d="M7 25h34c0 9-7.6 15-17 15S7 34 7 25z" fill="#F4F1EC"/><path d="M9 31h30" stroke="#D9534F"/><path d="M18 40h12" /></g></svg></div>
         <div class="mb-top"><h4>豚みそ丼</h4><span class="area">秩父名物</span></div>
         <p>豚肉のみそ漬けを焼いてご飯にのせた丼。駅周辺の食事処で。</p>
         <p class="fitline"><span class="fit ok">入れやすい</span>ランチ候補。蕎麦以外の選択肢に。</p>
       </article>
-      <article class="mb">
+      <article class="mb"><div class="il"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="17" cy="20" rx="10" ry="6" fill="#E3A94B" transform="rotate(-15 17 20)"/><ellipse cx="31" cy="21" rx="10" ry="6" fill="#D9973A" transform="rotate(12 31 21)"/><path d="M12 19l3-2M17 21l4-3M28 20l4 2M33 22l3 1" stroke-width="1.6"/><path d="M7 25h34c0 9-7.6 15-17 15S7 34 7 25z" fill="#F4F1EC"/><path d="M9 31h30" stroke="#D9534F"/><path d="M18 40h12" /></g></svg></div>
         <div class="mb-top"><h4>わらじかつ丼</h4><span class="area">秩父名物</span></div>
         <p>甘めのタレをくぐらせた大きなカツが2枚のる丼。長瀞にも出す店あり。</p>
         <p class="fitline"><span class="fit ok">入れやすい</span>ランチ候補。大人向けのボリューム。</p>
       </article>
-      <article class="mb">
+      <article class="mb"><div class="il"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M24 44V6" stroke-width="2.4"/><circle cx="24" cy="12" r="6" fill="#F2C94C"/><circle cx="24" cy="24" r="6.5" fill="#F2C94C"/><circle cx="24" cy="36" r="6" fill="#F2C94C"/><path d="M18 11c3 2 8 0 12 2M17.5 23c3 2 9 0 13 2M18 35c3 2 8 0 12 2" stroke="#8A4B24" stroke-width="2.2"/></g></svg></div>
         <div class="mb-top"><h4>みそポテト</h4><span class="area">秩父名物</span></div>
         <p>揚げたじゃがいもに甘いみそだれ。岩畳通りの屋台などで。</p>
         <p class="fitline"><span class="fit ok">入れやすい</span>岩畳のついでに。1〜2歳でも食べやすい。</p>
       </article>
-      <article class="mb">
+      <article class="mb"><div class="il"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M16 24h16l-8 20z" fill="#E8B27A"/><path d="M19 30l7 3M21 36l4 2" stroke-width="1.6"/><path d="M14 24c-2-5 3-8 6-8-1-5 4-10 7-8 1 3 5 3 5 8 3 0 4 5 2 8z" fill="#FFF8EC"/><circle cx="24" cy="10" r="3.5" fill="#9A5B2E"/></g></svg></div>
         <div class="mb-top"><h4>栗のソフトクリーム</h4><span class="area">長瀞</span></div>
         <p>ミルクソフトに栗のペースト。長瀞駅前の栗助 長瀞店。</p>
         <p class="fitline"><span class="fit ok">入れやすい</span>SLの前後に寄れる。</p>
       </article>
-      <article class="mb">
+      <article class="mb"><div class="il"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M10 26c0-9 6-15 14-15s14 6 14 15z" fill="#FFFFFF"/><path d="M13 22c4 2 7-2 11 0s7 2 11 0" stroke="#E0544F" stroke-width="3"/><path d="M8 26h32l-4 6H12z" fill="#CFE8F6"/><path d="M20 32h8v8h-8z" fill="#CFE8F6"/><path d="M15 42h18"/></g></svg></div>
         <div class="mb-top"><h4>天然氷のかき氷</h4><span class="area">長瀞</span></div>
         <p>長瀞でいちばん有名な名物。<a class="ext" href="https://asamireizou.blog.jp/" target="_blank" rel="noopener">阿左美冷蔵 寶登山道店</a>（木曜定休、日曜は営業）。</p>
         <p class="fitline"><span class="fit may">条件つき</span>3連休中で行列の可能性。10月は少し寒いかも。</p>
       </article>
-      <article class="mb">
+      <article class="mb"><div class="il"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M14 24c2-4 5-6 8-4s4 4 7 1 6-3 7 1" stroke="#6B5B4B" stroke-width="2"/><path d="M12 25c3-3 6-2 9 0s6 2 9-1 6-1 8 1" stroke="#6B5B4B" stroke-width="2"/><path d="M30 4L22 22M36 5L26 22" stroke-width="2.4"/><path d="M7 25h34c0 9-7.6 15-17 15S7 34 7 25z" fill="#F4F1EC"/><path d="M9 31h30" stroke="#3E6FB0"/><path d="M18 40h12" /></g></svg></div>
         <div class="mb-top"><h4>くるみそば・秩父そば</h4><span class="area">秩父名物</span></div>
         <p>すった山くるみとみそのつけ汁で食べるそば。長瀞の蕎麦店で。</p>
         <p class="fitline"><span class="fit may">条件つき</span>アレルギーの点で、大人だけで食べる前提。</p>
@@ -680,32 +752,32 @@ footer b{color:var(--orange-deep)}
 
     <h3 class="mb-h">お土産</h3>
     <div class="mb-grid">
-      <article class="mb">
+      <article class="mb"><div class="il"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><rect x="8" y="12" width="32" height="26" rx="5" fill="#F5E3C8"/><path d="M14 22c3-4 10-4 12-1 3-3 8-2 8 2 0 5-7 7-11 6-5 1-11-1-9-7z" fill="#C8743A"/><path d="M12 12v-3h24v3"/><path d="M14 33h12" stroke-width="2"/></g></svg></div>
         <div class="mb-top"><h4>豚肉のみそ漬け</h4><span class="area">秩父名物</span></div>
         <p>家で焼いて食べられる秩父の定番。長瀞の土産店にも。</p>
         <p class="fitline"><span class="fit ok">入れやすい</span>要冷蔵。保冷バッグがあると安心。</p>
       </article>
-      <article class="mb">
+      <article class="mb"><div class="il"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M24 8c6 5 14 12 14 20 0 7-6 12-14 12S10 35 10 28c0-8 8-15 14-20z" fill="#A0613A"/><path d="M11 30c4 3 9 4 13 4s9-1 13-4c0 6-6 10-13 10s-13-4-13-10z" fill="#E8C48E"/><path d="M24 8l0-3"/></g></svg></div>
         <div class="mb-top"><h4>まつりばやし</h4><span class="area">長瀞</span></div>
         <p>栗を丸ごとパイ生地で包んだお菓子。栗助 長瀞店で。</p>
         <p class="fitline"><span class="fit ok">入れやすい</span>駅前で買える。</p>
       </article>
-      <article class="mb">
+      <article class="mb"><div class="il"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><rect x="9" y="11" width="30" height="26" rx="8" fill="#E8B35C"/><path d="M15 12v24M24 11v26M33 12v24M10 20h28M10 29h28" stroke-width="1.8"/></g></svg></div>
         <div class="mb-top"><h4>くるみパイ・栗パイ</h4><span class="area">長瀞</span></div>
         <p>長瀞の老舗 万寿庵のパイ。</p>
         <p class="fitline"><span class="fit ok">入れやすい</span>個包装で配りやすい。</p>
       </article>
-      <article class="mb">
+      <article class="mb"><div class="il"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M24 42V20" /><path d="M24 22c-10-2-14-9-12-16 8 1 12 7 12 16z" fill="#7CC47A"/><path d="M24 26c10-3 14-10 12-17-8 2-12 8-12 17z" fill="#5FAF5C"/><path d="M14 42h20" /><path d="M18 30c-6 0-9 4-8 8 5 0 8-3 8-8z" fill="#9AD697"/></g></svg></div>
         <div class="mb-top"><h4>しゃくし菜漬け</h4><span class="area">秩父名物</span></div>
         <p>秩父の伝統野菜しゃくし菜の漬物。</p>
         <p class="fitline"><span class="fit ok">入れやすい</span>土産店で。</p>
       </article>
-      <article class="mb">
+      <article class="mb"><div class="il"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><rect x="11" y="11" width="26" height="26" rx="6" transform="rotate(45 24 24)" fill="#E6C27A"/><path d="M24 14l10 10-10 10-10-10z" stroke-width="1.8"/><circle cx="24" cy="24" r="2.5" fill="#8A4B24"/></g></svg></div>
         <div class="mb-top"><h4>秩父の和菓子</h4><span class="area">秩父名物</span></div>
         <p>秩父夜まつり最中、みそまんじゅうなど。</p>
         <p class="fitline"><span class="fit may">条件つき</span>主に秩父市内の店。長瀞で見つかれば。</p>
       </article>
-      <article class="mb">
+      <article class="mb"><div class="il"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M15 6h6v8c3 2 4 5 4 8v18a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V22c0-3 1-6 4-8z" fill="#7B2E3E"/><rect x="12" y="24" width="12" height="9" rx="1.5" fill="#F4F1EC"/><path d="M31 18h10c0 6-2 9-5 9s-5-3-5-9zM36 27v11M32 40h8" fill="none"/><path d="M31.5 21h9c-.5 3-2 5-4.5 5s-4-2-4.5-5z" fill="#7B2E3E"/></g></svg></div>
         <div class="mb-top"><h4>秩父ワイン・秩父の日本酒</h4><span class="area">秩父名物</span></div>
         <p>秩父ワイン源作印、武甲酒造など。</p>
         <p class="fitline"><span class="fit may">条件つき</span>長瀞の土産店に置いていることも。</p>
@@ -722,35 +794,35 @@ footer b{color:var(--orange-deep)}
     <div class="sh"><div class="en">NEXT TIME</div><h2>おまけ：秩父にはこんなところも</h2></div>
     <p class="pm-lead">今回は行きませんが、秩父にはほかにもこんな場所があります。</p>
     <div class="omake">
-      <div class="om">
+      <div class="om"><div class="il sm"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M4 34c4-3 8 3 12 0s8 3 12 0 8 3 12 0 4 0 4 0" stroke="#5AA7D6"/><path d="M6 26h36l-5 7H11z" fill="#C8894F"/><path d="M16 26v-6M26 26v-7" /><circle cx="16" cy="17" r="3" fill="#F4F1EC"/><circle cx="26" cy="16" r="3" fill="#F4F1EC"/><path d="M36 26L42 12" /></g></svg></div><div class="om-body">
         <h4><a class="ext" href="https://www.chichibu-railway.co.jp/nagatoro/" target="_blank" rel="noopener">長瀞ライン下り</a></h4>
         <p class="om-where">長瀞・岩畳の前</p>
-        <p>船で川を約20分下る。生後半年以上・身長60cm以上なら乗れる。</p>
+        <p>船で川を約20分下る。生後半年以上・身長60cm以上なら乗れる。</p></div>
       </div>
-      <div class="om">
+      <div class="om"><div class="il sm"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M6 12c6 2 30 2 36 0l-1 5H7z" fill="#E0544F"/><path d="M9 21h30" /><path d="M14 17v25M34 17v25" stroke-width="3.4" stroke="#E0544F"/><path d="M14 17v25M34 17v25" stroke-width="0" /><path d="M24 17v4"/><path d="M8 42h32"/></g></svg></div><div class="om-body">
         <h4><a class="ext" href="https://www.chichibu-jinja.or.jp/" target="_blank" rel="noopener">秩父神社</a></h4>
         <p class="om-where">秩父市・長瀞から車で約30分</p>
-        <p>秩父夜祭で知られる神社。秩父駅から歩いてすぐ。</p>
+        <p>秩父夜祭で知られる神社。秩父駅から歩いてすぐ。</p></div>
       </div>
-      <div class="om">
+      <div class="om"><div class="il sm"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M2 40l14-20 8 10 8-12 14 22z" fill="#9AD697"/><path d="M14 20c4 1 16 1 20 0l-.5 3H14.5z" fill="#E0544F"/><path d="M17 23v17M31 23v17" stroke="#E0544F" stroke-width="3"/><path d="M16 27h16"/></g></svg></div><div class="om-body">
         <h4><a class="ext" href="https://www.mitsuminejinja.or.jp/" target="_blank" rel="noopener">三峯神社</a></h4>
         <p class="om-where">秩父の山の上・長瀞から車で約1時間10分</p>
-        <p>山の上にある関東屈指のパワースポット。</p>
+        <p>山の上にある関東屈指のパワースポット。</p></div>
       </div>
-      <div class="om">
+      <div class="om"><div class="il sm"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M4 40c8-8 32-8 40 0z" fill="#9AD697"/><g transform="translate(14 22)"><circle r="4.2" fill="#F3A6AE"/><circle r="1.4" fill="#FFF" stroke-width="0"/></g><g transform="translate(24 16)"><circle r="4.2" fill="#F3A6AE"/><circle r="1.4" fill="#FFF" stroke-width="0"/></g><g transform="translate(34 22)"><circle r="4.2" fill="#F3A6AE"/><circle r="1.4" fill="#FFF" stroke-width="0"/></g><g transform="translate(19 31)"><circle r="4.2" fill="#F3A6AE"/><circle r="1.4" fill="#FFF" stroke-width="0"/></g><g transform="translate(30 31)"><circle r="4.2" fill="#F3A6AE"/><circle r="1.4" fill="#FFF" stroke-width="0"/></g></g></svg></div><div class="om-body">
         <h4>羊山公園の芝桜</h4>
         <p class="om-where">秩父市・見ごろは春</p>
-        <p>丘一面が芝桜でピンクに染まる。</p>
+        <p>丘一面が芝桜でピンクに染まる。</p></div>
       </div>
-      <div class="om">
+      <div class="om"><div class="il sm"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M10 42V26h28v16" fill="#C8894F"/><path d="M6 26l18-10 18 10z" fill="#7B2E3E"/><circle cx="16" cy="42" r="3" fill="#3E3A44"/><circle cx="32" cy="42" r="3" fill="#3E3A44"/><path d="M16 26v16M32 26v16M10 32h28" stroke-width="1.8"/><path d="M38 6v5M38 15v5M31 13h5M40 13h5M33 8l3 3M40 15l3 3M43 8l-3 3" stroke="#F2A93B" stroke-width="2"/></g></svg></div><div class="om-body">
         <h4>秩父夜祭</h4>
         <p class="om-where">秩父市・毎年12月2〜3日</p>
-        <p>豪華な屋台と冬の花火で知られるお祭り。</p>
+        <p>豪華な屋台と冬の花火で知られるお祭り。</p></div>
       </div>
-      <div class="om">
+      <div class="om"><div class="il sm"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M6 30h36" /><path d="M8 34h32l-3 8H11z" fill="#3E3A44"/><path d="M10 30c2-6 8-6 10 0M20 30c2-7 9-7 11 0M30 30c2-5 7-5 8 0" fill="#D98A6A"/><path d="M14 20c-2-3 2-5 0-8M24 18c-2-3 2-5 0-8M34 20c-2-3 2-5 0-8" stroke-width="1.8" stroke="var(--ink-soft)"/></g></svg></div><div class="om-body">
         <h4>秩父ホルモン</h4>
         <p class="om-where">秩父市内</p>
-        <p>昔から地元で親しまれてきた豚ホルモン焼き。夜の店が中心。</p>
+        <p>昔から地元で親しまれてきた豚ホルモン焼き。夜の店が中心。</p></div>
       </div>
     </div>
   </div>
