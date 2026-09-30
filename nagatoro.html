@@ -246,6 +246,7 @@ section{padding-block:36px 44px}
 a.ext{color:var(--green-deep);font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--green)}
 a.ext::after{content:"↗";font-size:.8em;margin-left:2px;text-decoration:none;display:inline-block}
 a.ext:focus-visible{outline:3px solid var(--orange);outline-offset:2px;border-radius:4px}
+a.ext-in{color:var(--green-deep);font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--green)}
 .tl-link{display:inline-block;margin-top:8px;font-size:13.5px}
 .bonus b{font-family:var(--font-d);color:var(--orange-deep)}
 .bonus .num{font-weight:800}
@@ -295,6 +296,25 @@ a.ext:focus-visible{outline:3px solid var(--orange);outline-offset:2px;border-ra
 .flow + .flow{margin-top:12px;background:var(--sky-soft)}
 
 footer{text-align:center;padding-block:30px 40px;font-family:var(--font-d);font-weight:700;font-size:14px;color:var(--ink-soft)}
+/* ---------- meibutsu ---------- */
+.fit{display:inline-block;font-family:var(--font-d);font-weight:800;font-size:12px;border-radius:999px;padding:0 10px;color:#fff;white-space:nowrap;vertical-align:1px}
+.fit.ok{background:var(--green-deep)}
+.fit.may{background:var(--orange-deep)}
+.mb-h{font-size:18px;font-weight:800;margin:28px 0 12px;display:flex;align-items:center;gap:10px}
+.mb-h::after{content:"";flex:1;height:3px;border-radius:3px;background:var(--line)}
+.mb-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.mb{background:var(--paper);border-radius:20px;padding:14px 16px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:6px}
+.mb-top{display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.mb h4{margin:0;font-family:var(--font-d);font-size:16px;font-weight:800}
+.area{font-family:var(--font-d);font-weight:700;font-size:11.5px;color:var(--ink-soft);background:var(--bg);border-radius:999px;padding:0 8px;white-space:nowrap}
+.mb p{font-size:14px;line-height:1.7}
+.fitline{margin-top:auto !important;padding-top:6px;border-top:2px dotted var(--line);display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+/* ---------- omake ---------- */
+.omake{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.om{background:var(--paper);border-radius:18px;padding:12px 16px;opacity:.95}
+.om h4{margin:0;font-family:var(--font-d);font-size:15px;font-weight:800}
+.om-where{font-size:12px;font-weight:700;color:var(--green-deep);margin-top:2px}
+.om p:last-child{font-size:13.5px;color:var(--ink-soft);line-height:1.7;margin-top:4px}
 footer b{color:var(--orange-deep)}
 .upd{display:block;margin-top:6px;font-size:12.5px;font-weight:500;font-variant-numeric:tabular-nums}
 .hero .draft{
@@ -491,7 +511,7 @@ footer b{color:var(--orange-deep)}
         <ul>
           <li>午前に行けなかったら岩畳へ</li>
           <li>岩畳・長瀞周辺をおさんぽ</li>
-          <li>おやつ・カフェで休憩</li>
+          <li>おやつ・カフェで休憩（<a class="ext-in" href="#meibutsu">名物を見る</a>）</li>
           <li>こどもたちのペースで</li>
         </ul>
         <div class="bonus">
@@ -607,6 +627,128 @@ footer b{color:var(--orange-deep)}
   </div>
 </section>
 
+<svg class="wave" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true" style="background:var(--paper);color:var(--bg)"><path d="M0 36 C220 4 420 0 620 16 C820 32 1010 34 1200 8 V36Z" fill="currentColor"/></svg>
+
+<!-- ============ MEIBUTSU ============ -->
+<section class="sec-bg" id="meibutsu">
+  <div class="wrap">
+    <div class="sh"><div class="en">LOCAL FOOD &amp; GIFT</div><h2>秩父・長瀞の名物</h2></div>
+    <p class="pm-lead">長瀞で食べられる・買えるものだけを集めました。<br>
+      <span class="fit ok">入れやすい</span> 今回そのまま取り入れやすい
+      <span class="fit may">条件つき</span> 様子を見て</p>
+
+    <h3 class="mb-h">食べる</h3>
+    <div class="mb-grid">
+      <article class="mb">
+        <div class="mb-top"><h4>豚みそ丼</h4><span class="area">秩父名物</span></div>
+        <p>豚肉のみそ漬けを焼いてご飯にのせた丼。駅周辺の食事処で。</p>
+        <p class="fitline"><span class="fit ok">入れやすい</span>ランチ候補。蕎麦以外の選択肢に。</p>
+      </article>
+      <article class="mb">
+        <div class="mb-top"><h4>わらじかつ丼</h4><span class="area">秩父名物</span></div>
+        <p>甘めのタレをくぐらせた大きなカツが2枚のる丼。長瀞にも出す店あり。</p>
+        <p class="fitline"><span class="fit ok">入れやすい</span>ランチ候補。大人向けのボリューム。</p>
+      </article>
+      <article class="mb">
+        <div class="mb-top"><h4>みそポテト</h4><span class="area">秩父名物</span></div>
+        <p>揚げたじゃがいもに甘いみそだれ。岩畳通りの屋台などで。</p>
+        <p class="fitline"><span class="fit ok">入れやすい</span>岩畳のついでに。1〜2歳でも食べやすい。</p>
+      </article>
+      <article class="mb">
+        <div class="mb-top"><h4>栗のソフトクリーム</h4><span class="area">長瀞</span></div>
+        <p>ミルクソフトに栗のペースト。長瀞駅前の栗助 長瀞店。</p>
+        <p class="fitline"><span class="fit ok">入れやすい</span>SLの前後に寄れる。</p>
+      </article>
+      <article class="mb">
+        <div class="mb-top"><h4>天然氷のかき氷</h4><span class="area">長瀞</span></div>
+        <p>長瀞でいちばん有名な名物。<a class="ext" href="https://asamireizou.blog.jp/" target="_blank" rel="noopener">阿左美冷蔵 寶登山道店</a>（木曜定休、日曜は営業）。</p>
+        <p class="fitline"><span class="fit may">条件つき</span>3連休中で行列の可能性。10月は少し寒いかも。</p>
+      </article>
+      <article class="mb">
+        <div class="mb-top"><h4>くるみそば・秩父そば</h4><span class="area">秩父名物</span></div>
+        <p>すった山くるみとみそのつけ汁で食べるそば。長瀞の蕎麦店で。</p>
+        <p class="fitline"><span class="fit may">条件つき</span>アレルギーの点で、大人だけで食べる前提。</p>
+      </article>
+    </div>
+
+    <h3 class="mb-h">お土産</h3>
+    <div class="mb-grid">
+      <article class="mb">
+        <div class="mb-top"><h4>豚肉のみそ漬け</h4><span class="area">秩父名物</span></div>
+        <p>家で焼いて食べられる秩父の定番。長瀞の土産店にも。</p>
+        <p class="fitline"><span class="fit ok">入れやすい</span>要冷蔵。保冷バッグがあると安心。</p>
+      </article>
+      <article class="mb">
+        <div class="mb-top"><h4>まつりばやし</h4><span class="area">長瀞</span></div>
+        <p>栗を丸ごとパイ生地で包んだお菓子。栗助 長瀞店で。</p>
+        <p class="fitline"><span class="fit ok">入れやすい</span>駅前で買える。</p>
+      </article>
+      <article class="mb">
+        <div class="mb-top"><h4>くるみパイ・栗パイ</h4><span class="area">長瀞</span></div>
+        <p>長瀞の老舗 万寿庵のパイ。</p>
+        <p class="fitline"><span class="fit ok">入れやすい</span>個包装で配りやすい。</p>
+      </article>
+      <article class="mb">
+        <div class="mb-top"><h4>しゃくし菜漬け</h4><span class="area">秩父名物</span></div>
+        <p>秩父の伝統野菜しゃくし菜の漬物。</p>
+        <p class="fitline"><span class="fit ok">入れやすい</span>土産店で。</p>
+      </article>
+      <article class="mb">
+        <div class="mb-top"><h4>秩父の和菓子</h4><span class="area">秩父名物</span></div>
+        <p>秩父夜まつり最中、みそまんじゅうなど。</p>
+        <p class="fitline"><span class="fit may">条件つき</span>主に秩父市内の店。長瀞で見つかれば。</p>
+      </article>
+      <article class="mb">
+        <div class="mb-top"><h4>秩父ワイン・秩父の日本酒</h4><span class="area">秩父名物</span></div>
+        <p>秩父ワイン源作印、武甲酒造など。</p>
+        <p class="fitline"><span class="fit may">条件つき</span>長瀞の土産店に置いていることも。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true" style="background:var(--bg);color:var(--green-soft)"><path d="M0 36 C200 0 400 0 600 18 C800 36 1000 36 1200 6 V36Z" fill="currentColor"/></svg>
+
+<!-- ============ OMAKE ============ -->
+<section id="omake" style="background:var(--green-soft)">
+  <div class="wrap">
+    <div class="sh"><div class="en">NEXT TIME</div><h2>おまけ：秩父にはこんなところも</h2></div>
+    <p class="pm-lead">今回は行きませんが、秩父にはほかにもこんな場所があります。</p>
+    <div class="omake">
+      <div class="om">
+        <h4><a class="ext" href="https://www.chichibu-railway.co.jp/nagatoro/" target="_blank" rel="noopener">長瀞ライン下り</a></h4>
+        <p class="om-where">長瀞・岩畳の前</p>
+        <p>船で川を約20分下る。生後半年以上・身長60cm以上なら乗れる。</p>
+      </div>
+      <div class="om">
+        <h4><a class="ext" href="https://www.chichibu-jinja.or.jp/" target="_blank" rel="noopener">秩父神社</a></h4>
+        <p class="om-where">秩父市・長瀞から車で約30分</p>
+        <p>秩父夜祭で知られる神社。秩父駅から歩いてすぐ。</p>
+      </div>
+      <div class="om">
+        <h4><a class="ext" href="https://www.mitsuminejinja.or.jp/" target="_blank" rel="noopener">三峯神社</a></h4>
+        <p class="om-where">秩父の山の上・長瀞から車で約1時間10分</p>
+        <p>山の上にある関東屈指のパワースポット。</p>
+      </div>
+      <div class="om">
+        <h4>羊山公園の芝桜</h4>
+        <p class="om-where">秩父市・見ごろは春</p>
+        <p>丘一面が芝桜でピンクに染まる。</p>
+      </div>
+      <div class="om">
+        <h4>秩父夜祭</h4>
+        <p class="om-where">秩父市・毎年12月2〜3日</p>
+        <p>豪華な屋台と冬の花火で知られるお祭り。</p>
+      </div>
+      <div class="om">
+        <h4>秩父ホルモン</h4>
+        <p class="om-where">秩父市内</p>
+        <p>昔から地元で親しまれてきた豚ホルモン焼き。夜の店が中心。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="sec-bg">SLが見られたら、<b>それで大成功。</b><span class="upd">最終更新：<time datetime="2026-09-30">2026年9月30日</time></span></footer>
 
 <script>
@@ -628,7 +770,7 @@ footer b{color:var(--orange-deep)}
     {t:'途中', h:'休憩（1回以上）', p:'おむつ替え・ミルクなど。関越道のSA・PA、または花園ICを降りて山道に入る前のスーパーやホームセンター。', ic:'bottle', soft:true}
   ];
   var sl = {t:'11:33〜11:42', h:'SLパレオエクスプレス 長瀞駅に停車', p:'約9分停車。ここで子どもたちにSLを見せる。', ic:'train', star:true};
-  var lunch = {t:'12:00頃', h:'ランチ', p:'長瀞駅周辺。子連れで入りやすく、蕎麦以外のメニューも選べるお店。', ic:'bowl'};
+  var lunch = {t:'12:00頃', h:'ランチ', p:'長瀞駅周辺。子連れで入りやすく、蕎麦以外のメニューも選べるお店。', ic:'bowl', url:'#meibutsu', urlText:'秩父・長瀞の名物を見る'};
   var home = {t:'夕方', h:'帰宅', p:'花園IC → 関越道 → 所沢IC → 下道。帰りも様子を見て休憩。', ic:'car'};
 
   var plans = {
@@ -671,7 +813,7 @@ footer b{color:var(--orange-deep)}
       return '<li class="'+cls+'"><div class="dot">'+I[it.ic]+'</div><div class="card">'+
         '<span class="time">'+esc(it.t)+'</span><h3>'+h+'</h3><p>'+esc(it.p)+'</p>'+
         (it.memo ? '<div class="memo">'+esc(it.memo)+'</div>' : '')+
-        (it.url ? '<a class="ext tl-link" href="'+esc(it.url)+'" target="_blank" rel="noopener">'+esc(it.urlText)+'</a>' : '')+
+        (it.url ? (it.url.charAt(0)==='#' ? '<a class="ext-in tl-link" href="'+esc(it.url)+'">'+esc(it.urlText)+'</a>' : '<a class="ext tl-link" href="'+esc(it.url)+'" target="_blank" rel="noopener">'+esc(it.urlText)+'</a>') : '')+
         '</div></li>';
     }).join('');
     btns.forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.plan===key ? 'true':'false'); });
